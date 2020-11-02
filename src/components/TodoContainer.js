@@ -1,5 +1,6 @@
 import React from "react"
 import TodosList from "./TodosList"
+import Header from "./Header"
 
 class TodoContainer extends React.Component { //defines a React component class called TodoContainer and extends the Component class in the React library 
 state = { //state object that holds the todos data. todos is the prop
@@ -24,6 +25,7 @@ state = { //state object that holds the todos data. todos is the prop
     render() { //render method returns JSX. will not work without importing the React object from the react module
         return(
             <div>
+                <Header />
                 <TodosList todos={this.state.todos} />
             </div>
         )
