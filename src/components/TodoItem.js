@@ -6,7 +6,7 @@ class TodoItem extends React.Component {
             <input 
                 type="checkbox"
                 checked={this.props.todo.completed}
-                onChange={() => this.props.handleChangeProps()}
+                onChange={() => this.props.handleChange()} //renders out handleChange
                 /> 
             {this.props.todo.title}
             </li>
