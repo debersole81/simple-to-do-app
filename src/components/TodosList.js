@@ -1,5 +1,5 @@
 import React from "react"
-import TodoItem from "./TodoItem"
+import TodoItem from "./TodoItem" //we expect to call this in this component at some point
 
 class TodosList extends React.Component { //creates a component called TodosList 
     render() {
@@ -9,7 +9,7 @@ class TodosList extends React.Component { //creates a component called TodosList
                    <TodoItem 
                         key={todo.id}
                         todo={todo}
-                        handleChangeProps={this.props.handleChangeProps}
+                        handleChange={this.props.handleChange}
                     />
                ))}
             </div>
