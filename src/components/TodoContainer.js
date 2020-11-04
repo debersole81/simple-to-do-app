@@ -23,12 +23,12 @@ state = {
     ]          
     }
     
-    handleChange = () => { //this prop is passed down two levels to TodoItem
+    handleChange = () => { //this method is passed down two levels to TodoItem via props in the render syntax
         console.log("clicked");
     };
 
     render() { //render method returns JSX. will not work without importing the React object from the react module
-        const foo = {
+        const foo = { //defines props that will be passed to TodosList
             todos: this.state.todos,
             handleChange: this.handleChange
         };
