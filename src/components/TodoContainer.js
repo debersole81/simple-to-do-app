@@ -24,8 +24,15 @@ state = {
     }
     
     handleChange = (id) => { //this method is passed down two levels to TodoItem via props in the render syntax. accepts todo id as an argument and logs it in the console when checkbox is clicked.
-        console.log("clicked", id);
-    };
+        this.setState({
+            todos: this.state.todos.map(todo => {
+                if (todo.id === id) {
+                    todo.completed = !todo.completed;
+            } //conditional statement
+            return todo; //returns as a boolean value
+            }) //array map
+        }); //setState method
+    }; //handleChange method
 
     render() { //render method returns JSX. will not work without importing the React object from the react module
         const foo = { //defines props that will be passed to TodosList
