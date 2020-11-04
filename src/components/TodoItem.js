@@ -6,7 +6,7 @@ class TodoItem extends React.Component {
             <input 
                 type="checkbox"
                 checked={this.props.todo.completed}
-                onChange={() => this.props.handleChange()} //onChange handler calls the handleChange method in TodoContainer
+                onChange={() => this.props.handleChange(this.props.todo.id)} //onChange handler calls the handleChange method in TodoContainer and passes todo id.
                 /> 
             {this.props.todo.title}
             </li>
