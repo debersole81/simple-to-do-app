@@ -34,6 +34,10 @@ state = {
         }); //setState method
     }; //handleChange method
 
+    delTodo = (id) => { //event handler method to communicate with delete button in TodoItem.
+        console.log ("deleted", id);
+    };//delTodo method
+
     render() { //render method returns JSX. will not work without importing the React object from the react module
         const foo = { //defines props that will be passed to TodosList
             todos: this.state.todos,
