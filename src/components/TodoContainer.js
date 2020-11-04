@@ -23,8 +23,8 @@ state = {
     ]          
     }
     
-    handleChange = () => { //this method is passed down two levels to TodoItem via props in the render syntax
-        console.log("clicked");
+    handleChange = (id) => { //this method is passed down two levels to TodoItem via props in the render syntax. accepts todo id as an argument and logs it in the console when checkbox is clicked.
+        console.log("clicked", id);
     };
 
     render() { //render method returns JSX. will not work without importing the React object from the react module
