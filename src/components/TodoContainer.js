@@ -60,7 +60,7 @@ state = {
         return(
             <div>
                 <Header />
-                <InputTodo />
+                <InputTodo addTodoItem = {this.addTodoItem} />
                 <TodosList {...foo} /> 
             </div>
         );//return
