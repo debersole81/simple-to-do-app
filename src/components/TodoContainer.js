@@ -35,7 +35,13 @@ state = {
     }; //handleChange method
 
     delTodo = (id) => { //event handler method to communicate with delete button in TodoItem.
-        console.log ("deleted", id);
+        this.setState({
+            todos: [
+                ...this.state.todos.filter(todo => {
+                    return todo.id !== id;
+                }) //filter method. loops through todos elements and returns any id in the array that does not match the id that is passed from the onClick event in TodoItem
+            ] //todos array
+        });//setState
     };//delTodo method
 
     render() { //render method returns JSX. will not work without importing the React object from the react module
