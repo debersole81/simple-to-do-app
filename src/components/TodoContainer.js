@@ -1,6 +1,7 @@
 import React from "react" //this is just for the component that we are going to extend
 import TodosList from "./TodosList" //do you import from child to parent? this doesn't make sense.
 import Header from "./Header"
+import InputTodo from "./InputTodo"
 
 class TodoContainer extends React.Component { //defines a React component class called TodoContainer and extends the Component class in the React library. 
 state = {
