@@ -5,9 +5,11 @@ state = {
     title: ""
 };
 
-onChange = (e) => {
-    console.log ("Hello"); //event handler for onChange prop in the input tag
-};
+onChange = (e) => { //event handler for onChange prop in the input tag
+    this.setState({
+        title: e.target.value
+    }); //setState
+}; //onChange method (part of class)
 
     render() {
         return (
