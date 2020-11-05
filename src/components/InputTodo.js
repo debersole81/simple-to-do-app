@@ -13,7 +13,7 @@ onChange = (e) => { //event handler for onChange prop in the input tag, triggere
 
     render() {
         return (
-            <form>
+            <form onSubmit=this.handleSubmit>
                 <input 
                     type="text" 
                     placeholder="Add Todo..." 
