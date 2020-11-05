@@ -8,7 +8,7 @@ state = {
     render() {
         return (
             <form>
-                <input type="text" placeholder="Add Todo..."/>
+                <input type="text" placeholder="Add Todo..." value={this.state.title}/> 
                 <input type="submit" value="Submit" />
             </form>
         )
