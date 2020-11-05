@@ -11,9 +11,14 @@ onChange = (e) => { //event handler for onChange prop in the input tag, triggere
     }); //setState
 }; //onChange method (part of class)
 
+handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(this.state.title)
+};//handleSubmit method
+
     render() {
         return (
-            <form onSubmit=this.handleSubmit>
+            <form onSubmit={this.handleSubmit}>
                 <input 
                     type="text" 
                     placeholder="Add Todo..." 
