@@ -54,6 +54,7 @@ state = {
         return(
             <div>
                 <Header />
+                <InputTodo />
                 <TodosList {...foo} /> 
             </div>
         );//return
