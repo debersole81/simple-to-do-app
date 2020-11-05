@@ -13,7 +13,7 @@ onChange = (e) => { //event handler for onChange prop in the input tag, triggere
 
 handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state.title)
+    this.props.addTodoProps(this.state.title);
 };//handleSubmit method
 
     render() {
