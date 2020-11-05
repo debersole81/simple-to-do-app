@@ -5,6 +5,10 @@ state = {
     title: ""
 };
 
+onChange = (e) => {
+    console.log ("Hello"); //event handler for onChange prop in the input tag
+};
+
     render() {
         return (
             <form>
