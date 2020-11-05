@@ -14,6 +14,9 @@ onChange = (e) => { //event handler for onChange prop in the input tag, triggere
 handleSubmit = (e) => {
     e.preventDefault();
     this.props.addTodoItem(this.state.title);
+    this.setState({
+        title:""
+    }) //setState method
 };//handleSubmit method
 
     render() {
