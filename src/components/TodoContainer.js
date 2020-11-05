@@ -45,11 +45,17 @@ state = {
         });//setState
     };//delTodo method
 
+    addTodoItem = (title) => {
+        console.log(title);
+    };//addTodoItem method
+
     render() { //render method returns JSX. will not work without importing the React object from the react module
         const foo = { //defines props that will be passed to TodosList
             todos: this.state.todos,
             handleChange: this.handleChange,
             deleteTodoProps: this.delTodo
+        
+
         };
         return(
             <div>
