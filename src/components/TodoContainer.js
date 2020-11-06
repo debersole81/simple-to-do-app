@@ -52,9 +52,9 @@ state = {
             completed: false
         };
         this.setState({
-            todos: [...this.state.todos, newTodo]
-        });
-    };//addTodoItem method
+            todos: [...this.state.todos, newTodo] //re-rendering the state and adding a new item to the current todos list using the spread operator
+        }); //setState method
+    };//addTodoItem object
 
     render() { //render method returns JSX. will not work without importing the React object from the react module
         const foo = { //defines props that will be passed to TodosList
