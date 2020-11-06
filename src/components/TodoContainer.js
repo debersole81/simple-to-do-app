@@ -46,7 +46,14 @@ state = {
     };//delTodo method
 
     addTodoItem = (title) => {
-        console.log(title);
+        const newTodo = {
+            id: 4,
+            title: title,
+            completed: false
+        };
+        this.setState({
+            todos: [...this.state.todos, newTodo]
+        });
     };//addTodoItem method
 
     render() { //render method returns JSX. will not work without importing the React object from the react module
