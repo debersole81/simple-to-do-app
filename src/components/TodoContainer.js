@@ -2,23 +2,23 @@ import React from "react" //this is just for the component that we are going to 
 import TodosList from "./TodosList" //do you import from child to parent? this doesn't make sense.
 import Header from "./Header"
 import InputTodo from "./InputTodo"
-import { v4 as uuid4 } from "uuid"
+import { v4 as uuidv4 } from "uuid"
 
 class TodoContainer extends React.Component { //defines a React component class called TodoContainer and extends the Component class in the React library. 
 state = {
     todos: [
         {
-            id: 1,
+            id: uuidv4(),
             title: "Setup development environment",
             completed: true
         },
         {
-            id: 2,
+            id: uuidv4(),
             title: "Develop website and add content",
             completed: false            
         },
         {
-            id: 3,
+            id: uuidv4(),
             title: "Deploy to live server",
             completed: false
         }
@@ -48,7 +48,7 @@ state = {
 
     addTodoItem = (title) => {
         const newTodo = {
-            id: 4,
+            id: uuidv4(),
             title: title,
             completed: false
         };
