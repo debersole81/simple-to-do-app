@@ -66,7 +66,7 @@ state = {
 
         };
         return(
-            <div>
+            <div className="container">
                 <Header />
                 <InputTodo addTodoItem = {this.addTodoItem} />
                 <TodosList {...foo} /> 
