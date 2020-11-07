@@ -23,7 +23,8 @@ handleSubmit = (e) => {
         return (
             <form onSubmit={this.handleSubmit} className="form-container">
                 <input 
-                    type="text" 
+                    type="text"
+                    className="input-text" 
                     placeholder="Add Todo..." 
                     value={this.state.title}
                     name="title" //why isn't this {this.state.title}?
