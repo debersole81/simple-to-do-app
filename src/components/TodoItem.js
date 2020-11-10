@@ -9,6 +9,8 @@ class TodoItem extends React.Component {
             textDecoration: "line-through",
         } //completedStyle object
 
+        const { completed, id, title} = this.props.todo //destructuring the this.props.todo (i.e., pulling variables out of the todo)
+        
         return( 
         <li className="todo-item">
             <input 
