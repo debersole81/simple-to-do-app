@@ -7,10 +7,10 @@ class TodoItem extends React.Component {
             color: "#d35e0f",
             opacity: 0.4,
             textDecoration: "line-through",
+        } //completedStyle object
 
-        }
-
-        return <li className="todo-item">
+        return( 
+        <li className="todo-item">
             <input 
                 type="checkbox"
                 checked={this.props.todo.completed}
@@ -19,9 +19,12 @@ class TodoItem extends React.Component {
             <button onClick={() => this.props.deleteTodoProps(this.props.todo.id)}> 
                 Delete
             </button> 
-            {this.props.todo.title}
-            </li>
-    }
-}
+            <span style={this.props.todo.completed ? completedStyle : null}>
+                {this.props.todo.title}
+            </span>
+        </li>
+        ) //return method
+    } //render method
+} //TodoItem
 
 export default TodoItem
