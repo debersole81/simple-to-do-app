@@ -1,5 +1,5 @@
-import React from "react" //importing React from the react module
-import ReactDOM from "react-dom" //importing ReactDOM from the react-dom module
+import React from "react"
+import ReactDOM from "react-dom"
 //component file
 import TodoContainer from "./components/TodoContainer"
 import "./App.css"
