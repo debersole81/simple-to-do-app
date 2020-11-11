@@ -1,10 +1,10 @@
-import React from "react" //this is just for the component that we are going to extend
-import TodosList from "./TodosList" //do you import from child to parent? this doesn't make sense.
+import React from "react" 
+import TodosList from "./TodosList"
 import Header from "./Header"
 import InputTodo from "./InputTodo"
 import { v4 as uuidv4 } from "uuid"
 
-class TodoContainer extends React.Component { //defines a React component class called TodoContainer and extends the Component class in the React library. 
+class TodoContainer extends React.Component { 
 state = {
     todos: [
         {
@@ -25,26 +25,26 @@ state = {
     ]          
     }
     
-    handleChange = (id) => { //this method is passed down two levels to TodoItem via props in the render syntax. accepts todo id as an argument and logs it in the console when checkbox is clicked.
+    handleChange = (id) => {
         this.setState({
             todos: this.state.todos.map(todo => {
                 if (todo.id === id) {
                     todo.completed = !todo.completed;
-            } //conditional statement
-            return todo; //returns as a boolean value
-            }) //array map
-        }); //setState method
-    }; //handleChange method
+            }
+            return todo;
+            })
+        });
+    };
 
-    delTodo = (id) => { //event handler method to communicate with delete button in TodoItem.
+    delTodo = (id) => {
         this.setState({
             todos: [
                 ...this.state.todos.filter(todo => {
                     return todo.id !== id;
-                }) //filter method. loops through todos elements and returns any id in the array that does not match the id that is passed from the onClick event in TodoItem
-            ] //todos array
-        });//setState
-    };//delTodo method
+                })
+            ]
+        });
+    };
 
     addTodoItem = (title) => {
         const newTodo = {
@@ -53,12 +53,12 @@ state = {
             completed: false
         };
         this.setState({
-            todos: [...this.state.todos, newTodo] //re-rendering the state and adding a new item to the current todos list using the spread operator
-        }); //setState method
-    };//addTodoItem object
+            todos: [...this.state.todos, newTodo]
+        });
+    };
 
-    render() { //render method returns JSX. will not work without importing the React object from the react module
-        const foo = { //defines props that will be passed to TodosList
+    render() {
+        const foo = {
             todos: this.state.todos,
             handleChange: this.handleChange,
             deleteTodoProps: this.delTodo
@@ -71,8 +71,8 @@ state = {
                 <InputTodo addTodoItem = {this.addTodoItem} />
                 <TodosList {...foo} /> 
             </div>
-        );//return
-    };//render
-};//class
+        );
+    };
+};
 
 export default TodoContainer
