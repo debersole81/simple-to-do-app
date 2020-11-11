@@ -58,10 +58,4 @@ body {
     cursor: pointer;
     float: right;
     outline: none;
-}
-.completed-style {
-    font-style: italic;
-    color: #d35e0f;
-    opacity: 0.4;
-    text-decoration: line-through;    
-}
+}  
