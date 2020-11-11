@@ -1,6 +1,6 @@
-import React, { Component } from "react"
+import React from "react"
 
-class InputTodo extends Component {
+class InputTodo extends React.Component {
 state = {
     title: ""
 };
