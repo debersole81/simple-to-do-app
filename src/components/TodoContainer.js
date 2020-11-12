@@ -43,6 +43,11 @@ state = {
         });
     };
 
+    componentDidMount() {
+        axios.get("https://jsonplaceholder.typicode.com/todos")
+            .then(response => console.log(response.data));
+    }
+
     render() {
                
         const foo = {
