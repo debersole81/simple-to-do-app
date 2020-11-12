@@ -3,6 +3,8 @@ import TodosList from "./TodosList"
 import Header from "./Header"
 import InputTodo from "./InputTodo"
 import { v4 as uuidv4 } from "uuid"
+import axios from "axios";
+
 
 class TodoContainer extends React.Component { 
 state = {
@@ -57,7 +59,13 @@ state = {
         });
     };
 
+    componentDidMount() {
+        axios.get("https://jsonplaceholder.typicode.com/todos") //GET request to axios
+            .then(response => console.log(response.data)); //promise method. renders axios response data in the console
+    }
+
     render() {
+               
         const foo = {
             todos: this.state.todos,
             handleChange: this.handleChange,
