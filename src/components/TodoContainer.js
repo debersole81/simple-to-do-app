@@ -45,7 +45,7 @@ state = {
 
     componentDidMount() {
         axios.get("https://jsonplaceholder.typicode.com/todos?_limit=10")
-            .then(response => console.log(response.data));
+            .then(response => this.setState({ todos: response.data }));
     }
 
     render() {
