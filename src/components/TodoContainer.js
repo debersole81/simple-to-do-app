@@ -44,7 +44,7 @@ state = {
     };
 
     componentDidMount() {
-        axios.get("https://jsonplaceholder.typicode.com/todos")
+        axios.get("https://jsonplaceholder.typicode.com/todos?_limit=10")
             .then(response => console.log(response.data));
     }
 
