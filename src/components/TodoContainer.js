@@ -22,13 +22,17 @@ state = {
     };
 
     delTodo = (id) => {
-        this.setState({
-            todos: [
-                ...this.state.todos.filter(todo => {
-                    return todo.id !== id;
+        axios
+            .delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+            .then(response => 
+                this.setState({
+                    todos: [
+                        ...this.state.todos.filter(todo => {
+                            return todo.id !== id 
+                        }),
+                    ],
                 })
-            ]
-        });
+            )
     };
 
     addTodoItem = (title) => {
