@@ -33,12 +33,12 @@ state = {
 
     addTodoItem = (title) => {
         axios
-            .post("https://jsonplaceholder.typicode.com/todos", {
+            .post("https://jsonplaceholder.typicode.com/todos", { //send the following data to URL
             title: title,
-            completed: false,
+            completed: false, //new todo entry will not be checked by default
             })
 
-            .then(response => 
+            .then(response => //promise that is resolved with the .then method. appends received data to todos list via the setState method.
                 this.setState({
                     todos: [...this.state.todos, (response.data)],
                             
