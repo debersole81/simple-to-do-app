@@ -15,10 +15,11 @@ state = {
         this.setState({
             todos: this.state.todos.map(todo => {
                 if (todo.id === id) {
-                    todo.completed = !todo.completed;
+                    todo.completed = !todo.completed; //inverting the value of todo.completed if conditional statement is true.
             }
             return todo;
-            })
+            }),
+            show: !this.state.show, //inverts the current value of the show property
         });
     };
 
