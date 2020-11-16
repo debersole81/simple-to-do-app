@@ -2,7 +2,9 @@ import React, { Component } from "react"
 
 class Header extends Component {
     componentDidUpdate(prevProps, prevState) {
-      
+      if (prevProps.headerSpan !== this.props.headerSpan) {
+        console.log("props change");
+      }
     }  
 
     render() {
