@@ -1,6 +1,10 @@
 import React, { Component } from "react"
 
 class Header extends Component {
+    componentDidUpdate(prevProps, prevState) {
+      
+    }  
+
     render() {
       const headerStyle = {
         padding: "20px 0",
