@@ -4,6 +4,7 @@ import TodoItem from "./TodoItem"
 class TodosList extends React.Component {  
     render() {
         return (
+            //map through todo props and pass to TodoItem component
             <div>
                {this.props.todos.map(todo => (
                    <TodoItem 
