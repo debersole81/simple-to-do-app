@@ -1,10 +1,14 @@
 import React from "react"
 
 class TodoItem extends React.Component {
+    
+    //Alert the user that a todo item is about to be deleted
     componentWillUnmount() {
         alert("Item about to be deleted!");
     }
+
     render() {
+       //Custom style for completed todos
         const completedStyle = {
             fontStyle: "italic",
             color: "#d35e0f",
@@ -12,6 +16,7 @@ class TodoItem extends React.Component {
             textDecoration: "line-through",
         }
 
+        //Destructure todo props
         const {completed, id, title} = this.props.todo
 
         return( 

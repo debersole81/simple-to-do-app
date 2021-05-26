@@ -11,6 +11,14 @@ class TodoContainer extends React.Component {
         show: false
     }
 
+    /** Lifecycle methods */
+    /* Get 10 todo items from JSON placeholder when component mounts. */
+    componentDidMount() {
+        axios.get("https://jsonplaceholder.typicode.com/todos?_limit=10")
+            //Save items to todos state
+            .then(response => this.setState({ todos: response.data }));
+    }
+
     /** Callback functions */
     /* InputTodo form change handler */
     handleChange = (id) => {
@@ -31,6 +39,7 @@ class TodoContainer extends React.Component {
             .delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
             .then(response =>
                 this.setState({
+                    //set state with all todos that do not equal the todo id being deleted                    
                     todos: [
                         ...this.state.todos.filter(todo => {
                             return todo.id !== id
@@ -57,15 +66,10 @@ class TodoContainer extends React.Component {
 
     }
 
-    /** Lifecycle methods */
-    /* Refresh todo items when component mounts */
-    componentDidMount() {
-        axios.get("https://jsonplaceholder.typicode.com/todos?_limit=10")
-            .then(response => this.setState({ todos: response.data }));
-    }
-
     render() {
-
+        
+        console.log(this.state.todos);
+        
         //Props object
         const foo = {
             todos: this.state.todos,
