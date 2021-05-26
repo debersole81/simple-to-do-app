@@ -1,18 +1,6 @@
 import React, { Component } from "react"
 
 class Header extends Component {
-    componentDidUpdate(prevProps, prevState) {
-      
-      const x = Math.floor(Math.random() * 256); //random color generator for r
-      const y = Math.floor(Math.random() * 256); //random color generator for g
-      const z = Math.floor(Math.random() * 256); //random color generator for b
-      const bgColor = "rgb(" + x + "," + y + "," + z + ")"; //returns rgb as a string of x,y,z values
-
-      if (prevProps.headerSpan !== this.props.headerSpan) {
-        document.getElementById("inH1").innerHTML = "clicked";
-        document.getElementById("inH1").style.backgroundColor = bgColor; //applying style via a conditional statement
-      }
-    }  
 
     render() {
       const headerStyle = {
@@ -32,6 +20,4 @@ class Header extends Component {
     }
   }
          
-
-
 export default Header
