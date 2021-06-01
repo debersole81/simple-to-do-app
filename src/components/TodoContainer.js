@@ -67,9 +67,7 @@ class TodoContainer extends React.Component {
     }
 
     render() {
-        
-        console.log(this.state.todos);
-        
+       
         //Props object
         const foo = {
             todos: this.state.todos,
