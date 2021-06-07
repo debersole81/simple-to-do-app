@@ -14,7 +14,7 @@ Users can enter a to-do item in the form field and click submit. The to-do item 
 Users can mark a to-do item as complete by clicking the checkbox in the application UI. Completed to-do items render with a strikethrough to help the user distinguish between completed and active to-dos.
 
 ### **Delete To-do Item**
-Users can delete to-do items by clicking on the 'Delete' button in the application UI. This action will alert the user that a to-do item is about to be deleted and prompts for user verification. Once verified, the to-do item is removed from the user's to-do list. Uses Axios to delete the to-do item from a JSON placeholder RESTful API.
+Users can delete to-do items by clicking on the 'Delete' button in the application UI. This action will alert the user that a to-do item is about to be deleted and prompts the user for verification. Once verified, the to-do item is removed from the user's to-do list. Uses Axios to delete the to-do item from a JSON placeholder RESTful API.
 
 ## **Built With**
 
@@ -23,6 +23,6 @@ Users can delete to-do items by clicking on the 'Delete' button in the applicati
 
 ## **Pending Features and Improvements**
 * Implement UI component library to improve usability and appearance of the UI.
-* Build editing feature that allows users to edit to-dos that are currently rendered in the UI.
-* Build a completion date feature.
+* Build editing feature that allows users to edit to-do items that are currently rendered in the UI.
+* Implement a completion date feature.
 * Build sorting functionality to allow users to sort by completion date or status.
